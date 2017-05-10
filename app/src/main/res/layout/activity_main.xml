@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.kh.fragmentflexibledemo1.MainActivity">
+<LinearLayout
+    android:id="@+id/line1"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnAddA"
+        android:text="Add A"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnAddB"
+        android:text="Add B"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnAddA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnRemoveA"
+        android:text="Remove A"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnAddB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnRemoveB"
+        android:text="Remove B"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnRemoveA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/line2"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:textAllCaps="false"
+    android:onClick="process"
+    android:layout_below="@+id/line1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnReplaceB"
+        android:text="Replace to B"
+        android:textAllCaps="false"
+        android:onClick="process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnReplaceA"
+        android:text="Replace to A"
+        android:textAllCaps="false"
+        android:onClick="process"
+        android:layout_toRightOf="@id/btnReplaceB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/line3"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:onClick="process"
+    android:layout_below="@id/line2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnAttachA"
+        android:text="Attach A"
+        android:textAllCaps="false"
+        android:onClick="process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnDetachA"
+        android:text="Detach A"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnAttachA"
+        android:onClick="process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnAttachB"
+        android:text="Attach B"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnDetachA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnDetachB"
+        android:text="Detach B"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnAttachB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/line4"
+    android:orientation="horizontal"
+    android:onClick="process"
+
+    android:gravity="center"
+    android:layout_below="@+id/line3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnBack"
+        android:onClick="process"
+        android:textAllCaps="false"
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnPopBackStack"
+        android:onClick="process"
+        android:text="Pop Back Stack"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/grid"
+    android:orientation="horizontal"
+    android:layout_below="@id/line4"
+    android:onClick="process"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/group"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="0sp"
+        android:layout_height="match_parent"></LinearLayout>
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="0sp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txt"
+            android:textSize="20sp"
+            android:layout_marginLeft="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+</LinearLayout>
+
+</RelativeLayout>
